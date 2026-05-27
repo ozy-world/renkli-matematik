@@ -1,11 +1,14 @@
-// 1. İnternetten indirdiğimiz renk paketini projemize çağırıyoruz:
 import chalk from 'chalk';
-// 2. Kendi basit toplama fonksiyonumuzu yazıyoruz:
+// Eski toplama fonksiyonumuz (Aynen duruyor)
 function topla(a, b) {
 return a + b;
 }
-// 3. Fonksiyonu çalıştırıp sonucu alıyoruz:
-const sonuc = topla(12, 23);
-// 4. Sonucu chalk paketi sayesinde terminalde süslü yazdırıyoruz:
-console.log(chalk.green.bold("Tebrikler! İşlem Başarılı."));
-console.log("Sayıların Toplamı: " + chalk.blue.underline(sonuc));
+// YENİ ÖZELLİK: Çıkarma fonksiyonu ekliyoruz
+function cikar(a, b) {
+return a - b;
+}
+// Testler
+const toplamaSonuc = topla(12, 23);
+console.log("Sayıların Toplamı: " + chalk.blue.underline(toplamaSonuc));
+const cikarmaSonuc = cikar(30, 12);
+console.log("Sayıların Farkı: " + chalk.red.bold(cikarmaSonuc));
